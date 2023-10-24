@@ -9,7 +9,7 @@ async fn main() {
         let time = mq::get_time();
         let expected_tick_count = (time / TICK_LEN_SECONDS).floor() as usize;
         let ticks_to_perform = expected_tick_count - ticks_so_far;
-        for _ in 0..(ticks_to_perform + 1) {
+        for _ in 0..ticks_to_perform {
             // tick logic here
         }
         ticks_so_far += ticks_to_perform;
